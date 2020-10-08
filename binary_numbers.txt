@@ -1,0 +1,48 @@
+Convert decimal numbers to binary. 25,63,9, 11
+right to left. 1+0+4
+
+For Decimals notice how the places in base 10 (ones place, tens place, hundreds place, etc.) are sequential powers of 10:
+
+10^0 = 1
+10^1 = 10
+10^2 = 100
+10^3 = 1000
+
+In a binary (base 2) number system, the places are sequential powers of 2:
+
+2^0 = 1
+2^1 = 2
+2^2 = 4
+2^3 = 8
+
+25 = 5 + 2 + 0 + 0 = 7 = 0111
+63 = 3 + 6 + 0 + 0 = 9 = 1001
+9 = 9 + 0 + 0 + 0 = 9 = 1001
+11 = 1 + 1 + 0 + 0 = 2 = 0010
+
+--------------------------------------------------------------
+Fixed width integers stored in memory
+
+Challenge:
+1. What is the number of possible integer values you can store with 4 bytes? How did you make that calculation?
+2. What is the number of possible integer values you can store with 8 bytes? How did you make that calculation?
+
+1. 4 bytes = 16 bits. 2^16
+2. 8 bytes = 64 bits. 2^64
+
+---------------------------------------------------------------
+Arrays stored in memory
+
+The general way to express this is:
+"address of nth item in array = address of array start + n".
+
+"address of nth item in array = address of array start + (n * size of each item in bytes)"
+
+Challenge
+Let's say you need to store an array of 64-bit integers. 
+Your array needs to have enough capacity for 24 integers. 
+How many 1-byte slots of memory need to be allocated to store this array?
+
+64 = 24 + (64*1) equals - 88?
+
+
