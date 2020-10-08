@@ -15,10 +15,10 @@ In a binary (base 2) number system, the places are sequential powers of 2:
 2^2 = 4
 2^3 = 8
 
-25 = 5 + 2 + 0 + 0 = 7 = 0111
-63 = 3 + 6 + 0 + 0 = 9 = 1001
-9 = 9 + 0 + 0 + 0 = 9 = 1001
-11 = 1 + 1 + 0 + 0 = 2 = 0010
+25 = 5 + 2 + 0 + 0 = 7 = 0111 or 1 + 2 = 3 = 0011
+63 = 3 + 6 + 0 + 0 = 9 = 1001 or 1 + 2 = 3 = 0011
+9 = 9 + 0 + 0 + 0 = 9 = 1001 or 1 = 0001
+111 = 1 + 1 + 0 + 0 = 2 = 0010 1 + 2 + 3 + 0011 or 1 + 2 + 4 = 7 = 0111
 
 --------------------------------------------------------------
 Fixed width integers stored in memory
@@ -38,11 +38,18 @@ The general way to express this is:
 
 "address of nth item in array = address of array start + (n * size of each item in bytes)"
 
+Conditions for accessing elements in an array:
+1. Each item in the array has to take up the same number of bytes.
+2. The array has to be stored in contiguous slots in memory without any gaps or interruptions.
+3. Arrays have to be predictable to be reliable.
+
 Challenge
 Let's say you need to store an array of 64-bit integers. 
 Your array needs to have enough capacity for 24 integers. 
 How many 1-byte slots of memory need to be allocated to store this array?
 
-64 = 24 + (64*1) equals - 88?
 
+#64 = 24 + (64*1) equals - 88? NO!
 
+64 bits = 8 bytes so
+8 = 24 + (8*1) = 32 byte slots Yes!3`
